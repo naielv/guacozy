@@ -36,7 +36,8 @@ RUN apk update && apk add \
     postgresql-dev \
     python3-dev \
     libffi-dev \
-    openldap-dev
+    openldap-dev \
+    libsasl2-dev python-dev libldap2-dev libssl-dev
 
 COPY guacozy_server/requirements*.txt ./
 RUN pip install --upgrade pip && \
