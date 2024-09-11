@@ -1,5 +1,5 @@
 ARG BUILDFRONTENDFROM=node:12.2.0-alpine
-ARG SERVERFROM=python:3.7-alpine
+ARG SERVERFROM=python:3.7-alpine3.14
 
 ####################
 # BUILDER FRONTEND #
@@ -36,8 +36,8 @@ RUN apk update && apk add \
     postgresql-dev \
     python3-dev \
     libffi-dev \
-    openldap-dev \
-    libsasl2-dev python-dev libldap2-dev libssl-dev
+    openldap-dev
+
 
 COPY guacozy_server/requirements*.txt ./
 RUN pip install --upgrade pip && \
