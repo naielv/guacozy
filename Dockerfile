@@ -81,6 +81,7 @@ RUN mkdir -p /run/nginx && \
     cd /tmp/docker && \
     mv entrypoint.sh /entrypoint.sh && \
     chmod +x /entrypoint.sh && \
+    mkdir -p /etc/nginx/conf.d && \
     mv nginx-default.conf /etc/nginx/conf.d/default.conf && \
     mkdir -p /etc/supervisor.d/ && \
     mv /tmp/docker/supervisor-app.ini /etc/supervisor.d/ && \
